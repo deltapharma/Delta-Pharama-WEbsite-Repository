@@ -34,18 +34,15 @@ delta-pharma-website/
 - Fonts load from Google Fonts with Arial/Helvetica fallbacks.
 - The logo artwork is used as supplied — never recreated with typed text.
 
-## Before going live — replace placeholders
+## Contact details
 
-Search `index.html` for text in **[square brackets]**:
-
-1. **Address, phone, email** in the Contact section (and the `tel:` / `mailto:` links).
-2. In `js/main.js`, set `CONTACT_EMAIL` to the address that should receive enquiries.
-3. Review the **Products** section — the four product areas are general examples; update them to match the actual portfolio.
-4. Review About / Quality wording so every claim matches what the company can verify (add licences or certifications only if they apply).
+Contact details (address, telephone, cell/WhatsApp, CEO) are in the Contact section and footer of `index.html`.
 
 ## Contact form
 
-By default the form opens the visitor's email app with the message pre-filled (works on any static host). To receive submissions directly instead, connect a form service such as Formspree or Netlify Forms and remove the submit handler in `js/main.js`.
+The form opens WhatsApp with the visitor's message pre-filled, sent to the number in `CONTACT_WHATSAPP` in `js/main.js`. To receive messages by email instead, put an address in `CONTACT_EMAIL` in the same file. To store submissions directly, connect a form service such as Formspree and remove the submit handler.
+
+Review the **Products**, About and Quality wording so every claim matches what the company can verify.
 
 ## Deploying
 

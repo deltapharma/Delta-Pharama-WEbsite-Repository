@@ -611,6 +611,15 @@ small, .caption, .meta {
   text-transform: uppercase;
   color: var(--brand-blue);
 }
+.footer-address {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--brand-slate);
+  margin-top: 8px;
+}
+.footer-address a { color: var(--brand-slate); text-decoration: none; }
+.footer-address a:hover { color: var(--brand-blue); }
 .footer-logo {
   background: var(--white);
   border-radius: var(--radius);

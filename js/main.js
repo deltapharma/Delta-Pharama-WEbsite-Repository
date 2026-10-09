@@ -2,8 +2,11 @@
 (function () {
   'use strict';
 
-  // Email address that receives contact-form messages. Change this.
-  var CONTACT_EMAIL = 'info@example.com';
+  // Contact-form messages are sent to this WhatsApp number
+  // (international format, digits only: 92 + number without the leading 0).
+  // To receive them by email instead, add an address to CONTACT_EMAIL.
+  var CONTACT_WHATSAPP = '923439104456';
+  var CONTACT_EMAIL = '';
 
   var header = document.querySelector('.site-header');
   var toggle = document.querySelector('.nav-toggle');
@@ -72,9 +75,8 @@
   if (year) year.textContent = new Date().getFullYear();
 
   // ----- Contact form -----
-  // No server is needed: on submit the visitor's email app opens with the
-  // message pre-filled. To use a form service (Formspree, Netlify Forms, etc.)
-  // instead, set the form's action/method and remove this handler.
+  // No server is needed: on submit the message opens pre-filled in WhatsApp
+  // (or the visitor's email app, if CONTACT_EMAIL is set).
   var form = document.getElementById('contact-form');
   var status = document.getElementById('form-status');
 
@@ -88,7 +90,9 @@
 
       [['name', name], ['email', email], ['message', message]].forEach(function (pair) {
         var field = form.elements[pair[0]];
-        var bad = !pair[1] || (pair[0] === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(pair[1]));
+        var bad = pair[0] === 'email'
+          ? (pair[1] !== '' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(pair[1]))
+          : !pair[1];
         field.setAttribute('aria-invalid', bad ? 'true' : 'false');
         if (bad) invalid.push(field);
       });
@@ -101,15 +105,22 @@
       }
 
       var subject = 'Website enquiry: ' + form.elements.topic.value;
-      var body = 'Name: ' + name + '\nEmail: ' + email +
-        (form.elements.phone.value.trim() ? '\nPhone: ' + form.elements.phone.value.trim() : '') +
+      var phone = form.elements.phone.value.trim();
+      var body = 'Name: ' + name +
+        (email ? '\nEmail: ' + email : '') +
+        (phone ? '\nPhone: ' + phone : '') +
         '\n\n' + message;
 
-      window.location.href = 'mailto:' + CONTACT_EMAIL +
-        '?subject=' + encodeURIComponent(subject) +
-        '&body=' + encodeURIComponent(body);
-
-      status.textContent = 'Thank you — your email app should open with your message ready to send.';
+      if (CONTACT_EMAIL) {
+        window.location.href = 'mailto:' + CONTACT_EMAIL +
+          '?subject=' + encodeURIComponent(subject) +
+          '&body=' + encodeURIComponent(body);
+        status.textContent = 'Thank you — your email app should open with your message ready to send.';
+      } else {
+        window.open('https://wa.me/' + CONTACT_WHATSAPP + '?text=' +
+          encodeURIComponent(subject + '\n' + body), '_blank', 'noopener');
+        status.textContent = 'Thank you — WhatsApp should open with your message ready to send.';
+      }
       status.className = 'form-status caption is-success';
     });
   }
