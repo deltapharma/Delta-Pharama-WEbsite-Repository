@@ -163,7 +163,10 @@ small, .caption, .meta {
   height: var(--header-h);
 }
 
-.brand img { height: 64px; width: auto; mix-blend-mode: multiply; }
+.brand { display: inline-flex; border-radius: 8px; transition: opacity .2s ease, transform .2s ease; }
+.brand:hover { opacity: 0.85; }
+.brand:active { transform: scale(0.98); }
+.brand img { height: 68px; width: auto; mix-blend-mode: multiply; }
 .hero-card img, .footer-logo img { mix-blend-mode: multiply; }
 
 .site-nav ul {
@@ -223,7 +226,7 @@ small, .caption, .meta {
 
 @media (max-width: 899px) {
   :root { --header-h: 72px; }
-  .brand img { height: 54px; }
+  .brand img { height: 58px; }
   .nav-toggle { display: flex; }
 
   .site-nav {

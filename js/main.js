@@ -33,6 +33,15 @@
     });
   }
 
+  // ----- Home links (logo, Home menu item) scroll to the very top -----
+  document.querySelectorAll('a[href="#home"]').forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      if (history.replaceState) history.replaceState(null, '', location.pathname + location.search);
+    });
+  });
+
   // ----- Header shadow on scroll -----
   function onScroll() {
     header.classList.toggle('is-scrolled', window.scrollY > 8);
