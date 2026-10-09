@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Delta Pharma (Pvt.) Limited | Quality. Science. Trust.</title>
-  <meta name="description" content="Delta Pharma (Pvt.) Limited is a modern pharmaceutical company focused on quality, reliability and patient-centred care.">
+  <meta name="description" content="Delta Pharma (Pvt.) Limited, Nowshera: tablets, capsules, syrups and dry suspensions including Excip, Levetazet, D-Zeth, Delmol, Eso-Del and Karzole.">
   <meta name="theme-color" content="#102F67">
 
   <!-- Open Graph (social sharing preview) -->
@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="css/styles.css?v=5">
+  <link rel="stylesheet" href="css/styles.css?v=6">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -167,41 +167,425 @@
             <p>In-process and finished-product testing before any batch is released.</p>
           </li>
         </ol>
+
+        <div class="licence-block">
+          <figure class="licence-figure">
+            <button type="button" class="licence-open" id="licence-open" aria-label="View the Licence to Manufacture full size">
+              <img src="assets/images/licence-to-manufacture.jpg" alt="Government of Pakistan Licence to Manufacture No. 000446 issued to Delta Pharma (Pvt) Ltd. by the Central Licensing Board" width="971" height="1100" loading="lazy">
+            </button>
+            <figcaption class="caption">Select the licence to view it full size.</figcaption>
+          </figure>
+          <div class="licence-copy">
+            <p class="section-marker">Licensed manufacturer</p>
+            <h3>Licensed by the Government of Pakistan</h3>
+            <p>Delta Pharma (Pvt.) Ltd. holds a Licence to Manufacture by way of formulation, issued by the Central Licensing Board, for drugs registered under the Drugs Act, 1976, at Plot 09, Nowshera Industrial Estate (S.I.Z), Risalpur, KPK.</p>
+            <dl class="licence-facts">
+              <div><dt>Licence no.</dt><dd>000446</dd></div>
+              <div><dt>Type</dt><dd>Formulation</dd></div>
+              <div><dt>Issued by</dt><dd>Central Licensing Board</dd></div>
+            </dl>
+          </div>
+        </div>
       </div>
+
+      <dialog class="licence-dialog" id="licence-dialog" aria-label="Licence to Manufacture">
+        <button type="button" class="pd-close" id="licence-close" aria-label="Close">&times;</button>
+        <img src="assets/images/licence-to-manufacture.jpg" alt="Government of Pakistan Licence to Manufacture No. 000446 issued to Delta Pharma (Pvt) Ltd.">
+      </dialog>
     </section>
 
     <!-- ============ PRODUCTS ============ -->
     <section class="section" id="products">
       <div class="container">
-        <div class="section-head">
-          <p class="section-marker">03 | Our products</p>
-          <h2>A portfolio built for everyday care.</h2>
-          <p>Explore our main product areas. Contact our team for full product information and availability.</p>
+        <div class="products-head">
+          <div class="section-head">
+            <p class="section-marker">03 | Our products</p>
+            <h2>A portfolio built for everyday care.</h2>
+            <p>33 registered medicines in four dosage forms. Choose a category, or select any product for its full composition and pack details.</p>
+          </div>
+          <label class="product-search" for="product-search">
+            <span class="visually-hidden">Search products</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
+            <input id="product-search" type="search" placeholder="Search by name or ingredient" autocomplete="off">
+          </label>
         </div>
 
-        <div class="card-grid">
-          <article class="card">
-            <div class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18ZM6 11v2h12v-2H6Z"/></svg></div>
-            <h3>Tablets (General)</h3>
-            <p>Solid oral tablets produced to consistent specifications.</p>
-          </article>
-          <article class="card">
-            <div class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.2 13.4a5 5 0 0 1 7.1-7.1l6.4 6.4a5 5 0 0 1-7.1 7.1l-6.4-6.4Zm1.4-5.7a3 3 0 0 0 0 4.3l3 3 4.3-4.3-3-3a3 3 0 0 0-4.3 0Z"/></svg></div>
-            <h3>Capsules (General)</h3>
-            <p>Hard capsules for accurate, easy-to-swallow oral dosing.</p>
-          </article>
-          <article class="card">
-            <div class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 2h6v3h-1v2.1A5 5 0 0 1 18 12v8a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2v-8a5 5 0 0 1 4-4.9V5H9V2Zm-1 12v4h8v-4H8Z"/></svg></div>
-            <h3>Syrup (General)</h3>
-            <p>Ready-to-use oral liquids suitable for children and adults.</p>
-          </article>
-          <article class="card">
-            <div class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M8 3h8v3l-1 1v2h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-9a2 2 0 0 1 2-2h2V7L8 6V3Zm1 11a1 1 0 1 0 2 0 1 1 0 0 0-2 0Zm4 1a1 1 0 1 0 2 0 1 1 0 0 0-2 0Zm-3 3a1 1 0 1 0 2 0 1 1 0 0 0-2 0Z"/></svg></div>
-            <h3>Dry Suspension</h3>
-            <p>Powder for oral suspension, mixed with water before use for a stable, fresh dose.</p>
-          </article>
+        <div class="category-cards" role="group" aria-label="Filter products by category">
+          <button type="button" class="category-card is-active" data-filter="all" aria-pressed="true">
+            <span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h7v7H4V4Zm9 0h7v7h-7V4ZM4 13h7v7H4v-7Zm9 0h7v7h-7v-7Z"/></svg></span>
+            <span class="category-name">All products</span>
+            <span class="category-count">33 products</span>
+          </button>
+          <button type="button" class="category-card" data-filter="tablets" aria-pressed="false">
+            <span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18ZM6 11v2h12v-2H6Z"/></svg></span>
+            <span class="category-name">Tablets</span>
+            <span class="category-count">19 products</span>
+            <span class="category-desc">Film-coated and plain oral tablets produced to consistent specifications.</span>
+          </button>
+          <button type="button" class="category-card" data-filter="capsules" aria-pressed="false">
+            <span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.2 13.4a5 5 0 0 1 7.1-7.1l6.4 6.4a5 5 0 0 1-7.1 7.1l-6.4-6.4Zm1.4-5.7a3 3 0 0 0 0 4.3l3 3 4.3-4.3-3-3a3 3 0 0 0-4.3 0Z"/></svg></span>
+            <span class="category-name">Capsules</span>
+            <span class="category-count">4 products</span>
+            <span class="category-desc">Hard capsules, including enteric-coated pellets, for accurate oral dosing.</span>
+          </button>
+          <button type="button" class="category-card" data-filter="syrup" aria-pressed="false">
+            <span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 2h6v3h-1v2.1A5 5 0 0 1 18 12v8a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2v-8a5 5 0 0 1 4-4.9V5H9V2Zm-1 12v4h8v-4H8Z"/></svg></span>
+            <span class="category-name">Syrup</span>
+            <span class="category-count">6 products</span>
+            <span class="category-desc">Ready-to-use oral syrups and suspensions for children and adults.</span>
+          </button>
+          <button type="button" class="category-card" data-filter="dry-suspension" aria-pressed="false">
+            <span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M8 3h8v3l-1 1v2h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-9a2 2 0 0 1 2-2h2V7L8 6V3Zm1 11a1 1 0 1 0 2 0 1 1 0 0 0-2 0Zm4 1a1 1 0 1 0 2 0 1 1 0 0 0-2 0Zm-3 3a1 1 0 1 0 2 0 1 1 0 0 0-2 0Z"/></svg></span>
+            <span class="category-name">Dry Suspension</span>
+            <span class="category-count">4 products</span>
+            <span class="category-desc">Powder for oral suspension, mixed with water before use for a stable, fresh dose.</span>
+          </button>
         </div>
+
+        <div class="product-catalogue" id="product-catalogue">
+        <div class="product-group" data-category="tablets">
+          <h3 class="product-group-title">Tablets <span>19 products</span></h3>
+          <ul class="product-grid">
+          <li><button type="button" class="product" data-product="0">
+            <span class="product-media"><img src="assets/images/products/beta-cyric.jpg" alt="Beta-Cyric 20 mg pack" width="900" height="675" loading="lazy"><span class="product-more">2 photos</span></span>
+            <span class="product-body">
+              <span class="product-form">Tablet</span>
+              <span class="product-name">Beta-Cyric 20 mg</span>
+              <span class="product-generic">Piroxicam beta-cyclodextrin</span>
+              <span class="product-meta"><span>2 × 10 tablets</span><span>Rs 358</span></span>
+            </span>
+          </button></li>
+          <li><button type="button" class="product" data-product="1">
+            <span class="product-media"><span class="product-noimg"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18ZM6 11v2h12v-2H6Z"/></svg><b>Cintadel 1 mg</b><small>Photo coming soon</small></span></span>
+            <span class="product-body">
+              <span class="product-form">Tablet</span>
+              <span class="product-name">Cintadel 1 mg</span>
+              <span class="product-generic">Cinitapride (as hydrogen tartrate)</span>
+              <span class="product-meta"><span>&nbsp;</span><span></span></span>
+            </span>
+          </button></li>
+          <li><button type="button" class="product" data-product="2">
+            <span class="product-media"><span class="product-noimg"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18ZM6 11v2h12v-2H6Z"/></svg><b>Dardnil 50 mg</b><small>Photo coming soon</small></span></span>
+            <span class="product-body">
+              <span class="product-form">Film-coated tablet</span>
+              <span class="product-name">Dardnil 50 mg</span>
+              <span class="product-generic">Diclofenac potassium</span>
+              <span class="product-meta"><span>20 tablets</span><span>Rs 155</span></span>
+            </span>
+          </button></li>
+          <li><button type="button" class="product" data-product="3">
+            <span class="product-media"><span class="product-noimg"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18ZM6 11v2h12v-2H6Z"/></svg><b>Delkocin 500 mg</b><small>Photo coming soon</small></span></span>
+            <span class="product-body">
+              <span class="product-form">Tablet</span>
+              <span class="product-name">Delkocin 500 mg</span>
+              <span class="product-generic">Clarithromycin</span>
+              <span class="product-meta"><span>&nbsp;</span><span></span></span>
+            </span>
+          </button></li>
+          <li><button type="button" class="product" data-product="4">
+            <span class="product-media"><span class="product-noimg"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18ZM6 11v2h12v-2H6Z"/></svg><b>Delmol Extra</b><small>Photo coming soon</small></span></span>
+            <span class="product-body">
+              <span class="product-form">Film-coated tablet</span>
+              <span class="product-name">Delmol Extra</span>
+              <span class="product-generic">Paracetamol + Caffeine</span>
+              <span class="product-meta"><span>10 × 10 tablets</span><span></span></span>
+            </span>
+          </button></li>
+          <li><button type="button" class="product" data-product="5">
+            <span class="product-media"><span class="product-noimg"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18ZM6 11v2h12v-2H6Z"/></svg><b>Delvetar 10 mg</b><small>Photo coming soon</small></span></span>
+            <span class="product-body">
+              <span class="product-form">Tablet</span>
+              <span class="product-name">Delvetar 10 mg</span>
+              <span class="product-generic">Rosuvastatin (as calcium)</span>
+              <span class="product-meta"><span>10 tablets</span><span>Rs 250</span></span>
+            </span>
+          </button></li>
+          <li><button type="button" class="product" data-product="6">
+            <span class="product-media"><img src="assets/images/products/delvitis.jpg" alt="Delvitis Multivitamin pack" width="900" height="675" loading="lazy"></span>
+            <span class="product-body">
+              <span class="product-form">Film-coated tablet</span>
+              <span class="product-name">Delvitis Multivitamin</span>
+              <span class="product-generic">11 vitamins</span>
+              <span class="product-meta"><span>30 tablets</span><span>Rs 220</span></span>
+            </span>
+          </button></li>
+          <li><button type="button" class="product" data-product="7">
+            <span class="product-media"><span class="product-noimg"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18ZM6 11v2h12v-2H6Z"/></svg><b>Excip 250 mg</b><small>Photo coming soon</small></span></span>
+            <span class="product-body">
+              <span class="product-form">Film-coated tablet</span>
+              <span class="product-name">Excip 250 mg</span>
+              <span class="product-generic">Ciprofloxacin (as HCl)</span>
+              <span class="product-meta"><span>10 tablets</span><span>Rs 325</span></span>
+            </span>
+          </button></li>
+          <li><button type="button" class="product" data-product="8">
+            <span class="product-media"><img src="assets/images/products/excip-500mg-tablet.jpg" alt="Excip 500 mg pack" width="900" height="675" loading="lazy"></span>
+            <span class="product-body">
+              <span class="product-form">Film-coated tablet</span>
+              <span class="product-name">Excip 500 mg</span>
+              <span class="product-generic">Ciprofloxacin (as HCl)</span>
+              <span class="product-meta"><span>10 tablets</span><span>Rs 435</span></span>
+            </span>
+          </button></li>
+          <li><button type="button" class="product" data-product="9">
+            <span class="product-media"><img src="assets/images/products/faxetine.jpg" alt="Faxetine 20 mg pack" width="900" height="675" loading="lazy"><span class="product-more">2 photos</span></span>
+            <span class="product-body">
+              <span class="product-form">Film-coated tablet</span>
+              <span class="product-name">Faxetine 20 mg</span>
+              <span class="product-generic">Fluoxetine (as HCl)</span>
+              <span class="product-meta"><span>2 × 10 tablets</span><span>Rs 250</span></span>
+            </span>
+          </button></li>
+          <li><button type="button" class="product" data-product="10">
+            <span class="product-media"><img src="assets/images/products/levetazet-250mg.jpg" alt="Levetazet 250 mg pack" width="900" height="675" loading="lazy"></span>
+            <span class="product-body">
+              <span class="product-form">Film-coated tablet</span>
+              <span class="product-name">Levetazet 250 mg</span>
+              <span class="product-generic">Levofloxacin (as hemihydrate)</span>
+              <span class="product-meta"><span>10 tablets</span><span>Rs 280</span></span>
+            </span>
+          </button></li>
+          <li><button type="button" class="product" data-product="11">
+            <span class="product-media"><img src="assets/images/products/levetazet-500mg.jpg" alt="Levetazet 500 mg pack" width="900" height="675" loading="lazy"></span>
+            <span class="product-body">
+              <span class="product-form">Film-coated tablet</span>
+              <span class="product-name">Levetazet 500 mg</span>
+              <span class="product-generic">Levofloxacin (as hemihydrate)</span>
+              <span class="product-meta"><span>10 tablets</span><span>Rs 420</span></span>
+            </span>
+          </button></li>
+          <li><button type="button" class="product" data-product="12">
+            <span class="product-media"><span class="product-noimg"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18ZM6 11v2h12v-2H6Z"/></svg><b>Linzmic 400 mg</b><small>Photo coming soon</small></span></span>
+            <span class="product-body">
+              <span class="product-form">Film-coated tablet</span>
+              <span class="product-name">Linzmic 400 mg</span>
+              <span class="product-generic">Linezolid</span>
+              <span class="product-meta"><span>&nbsp;</span><span></span></span>
+            </span>
+          </button></li>
+          <li><button type="button" class="product" data-product="13">
+            <span class="product-media"><span class="product-noimg"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18ZM6 11v2h12v-2H6Z"/></svg><b>Litrodel 2.5 mg</b><small>Photo coming soon</small></span></span>
+            <span class="product-body">
+              <span class="product-form">Film-coated tablet</span>
+              <span class="product-name">Litrodel 2.5 mg</span>
+              <span class="product-generic">Letrozole</span>
+              <span class="product-meta"><span>30 tablets</span><span></span></span>
+            </span>
+          </button></li>
+          <li><button type="button" class="product" data-product="14">
+            <span class="product-media"><span class="product-noimg"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18ZM6 11v2h12v-2H6Z"/></svg><b>Loranees 10 mg</b><small>Photo coming soon</small></span></span>
+            <span class="product-body">
+              <span class="product-form">Tablet</span>
+              <span class="product-name">Loranees 10 mg</span>
+              <span class="product-generic">Loratadine</span>
+              <span class="product-meta"><span>10 tablets</span><span>Rs 150</span></span>
+            </span>
+          </button></li>
+          <li><button type="button" class="product" data-product="15">
+            <span class="product-media"><img src="assets/images/products/mb-ron-fa.jpg" alt="MB-Ron FA pack" width="900" height="675" loading="lazy"></span>
+            <span class="product-body">
+              <span class="product-form">Film-coated tablet</span>
+              <span class="product-name">MB-Ron FA</span>
+              <span class="product-generic">Iron (III) hydroxide polymaltose complex + Folic acid</span>
+              <span class="product-meta"><span>2 × 10 tablets</span><span>Rs 250</span></span>
+            </span>
+          </button></li>
+          <li><button type="button" class="product" data-product="16">
+            <span class="product-media"><span class="product-noimg"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18ZM6 11v2h12v-2H6Z"/></svg><b>Paroxdel CR 25 mg</b><small>Photo coming soon</small></span></span>
+            <span class="product-body">
+              <span class="product-form">Controlled-release tablet</span>
+              <span class="product-name">Paroxdel CR 25 mg</span>
+              <span class="product-generic">Paroxetine (as HCl)</span>
+              <span class="product-meta"><span>3 × 10 tablets</span><span>Rs 889</span></span>
+            </span>
+          </button></li>
+          <li><button type="button" class="product" data-product="17">
+            <span class="product-media"><img src="assets/images/products/reloxidel.jpg" alt="Reloxidel 400 mg pack" width="900" height="675" loading="lazy"><span class="product-more">3 photos</span></span>
+            <span class="product-body">
+              <span class="product-form">Film-coated tablet</span>
+              <span class="product-name">Reloxidel 400 mg</span>
+              <span class="product-generic">Moxifloxacin (as HCl)</span>
+              <span class="product-meta"><span>5 tablets</span><span>Rs 750</span></span>
+            </span>
+          </button></li>
+          <li><button type="button" class="product" data-product="18">
+            <span class="product-media"><img src="assets/images/products/tonolix.jpg" alt="Tonolix pack" width="900" height="675" loading="lazy"></span>
+            <span class="product-body">
+              <span class="product-form">Tablet</span>
+              <span class="product-name">Tonolix</span>
+              <span class="product-generic">Tramadol HCl + Paracetamol</span>
+              <span class="product-meta"><span>10 tablets</span><span>Rs 210</span></span>
+            </span>
+          </button></li>
+          </ul>
+        </div>
+        <div class="product-group" data-category="capsules">
+          <h3 class="product-group-title">Capsules <span>4 products</span></h3>
+          <ul class="product-grid">
+          <li><button type="button" class="product" data-product="19">
+            <span class="product-media"><img src="assets/images/products/d-zeth-250mg-capsule.jpg" alt="D-Zeth 250 mg pack" width="900" height="675" loading="lazy"></span>
+            <span class="product-body">
+              <span class="product-form">Capsule</span>
+              <span class="product-name">D-Zeth 250 mg</span>
+              <span class="product-generic">Azithromycin (as dihydrate)</span>
+              <span class="product-meta"><span>6 capsules</span><span>Rs 375</span></span>
+            </span>
+          </button></li>
+          <li><button type="button" class="product" data-product="20">
+            <span class="product-media"><img src="assets/images/products/eso-del-40mg.jpg" alt="Eso-Del 40 mg pack" width="900" height="675" loading="lazy"></span>
+            <span class="product-body">
+              <span class="product-form">Capsule, enteric-coated pellets</span>
+              <span class="product-name">Eso-Del 40 mg</span>
+              <span class="product-generic">Esomeprazole (as magnesium trihydrate)</span>
+              <span class="product-meta"><span>2 × 7 capsules</span><span>Rs 420</span></span>
+            </span>
+          </button></li>
+          <li><button type="button" class="product" data-product="21">
+            <span class="product-media"><img src="assets/images/products/karzole-20mg.jpg" alt="Karzole 20 mg pack" width="900" height="675" loading="lazy"></span>
+            <span class="product-body">
+              <span class="product-form">Capsule, enteric-coated pellets</span>
+              <span class="product-name">Karzole 20 mg</span>
+              <span class="product-generic">Omeprazole</span>
+              <span class="product-meta"><span>2 × 7 capsules</span><span>Rs 250</span></span>
+            </span>
+          </button></li>
+          <li><button type="button" class="product" data-product="22">
+            <span class="product-media"><span class="product-noimg"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.2 13.4a5 5 0 0 1 7.1-7.1l6.4 6.4a5 5 0 0 1-7.1 7.1l-6.4-6.4Zm1.4-5.7a3 3 0 0 0 0 4.3l3 3 4.3-4.3-3-3a3 3 0 0 0-4.3 0Z"/></svg><b>Karzole 40 mg</b><small>Photo coming soon</small></span></span>
+            <span class="product-body">
+              <span class="product-form">Capsule, enteric-coated pellets</span>
+              <span class="product-name">Karzole 40 mg</span>
+              <span class="product-generic">Omeprazole</span>
+              <span class="product-meta"><span>2 × 7 capsules</span><span>Rs 300</span></span>
+            </span>
+          </button></li>
+          </ul>
+        </div>
+        <div class="product-group" data-category="syrup">
+          <h3 class="product-group-title">Syrup <span>6 products</span></h3>
+          <ul class="product-grid">
+          <li><button type="button" class="product" data-product="23">
+            <span class="product-media"><img src="assets/images/products/delmol-suspension.jpg" alt="Delmol Suspension 120 mg/5 ml pack" width="900" height="675" loading="lazy"><span class="product-more">3 photos</span></span>
+            <span class="product-body">
+              <span class="product-form">Paediatric oral suspension</span>
+              <span class="product-name">Delmol Suspension 120 mg/5 ml</span>
+              <span class="product-generic">Paracetamol</span>
+              <span class="product-meta"><span>60 ml</span><span>Rs 60</span></span>
+            </span>
+          </button></li>
+          <li><button type="button" class="product" data-product="24">
+            <span class="product-media"><img src="assets/images/products/delmol-forte-suspension.jpg" alt="Delmol Forte Suspension 250 mg/5 ml pack" width="900" height="675" loading="lazy"></span>
+            <span class="product-body">
+              <span class="product-form">Oral suspension</span>
+              <span class="product-name">Delmol Forte Suspension 250 mg/5 ml</span>
+              <span class="product-generic">Paracetamol</span>
+              <span class="product-meta"><span>60 ml</span><span>Rs 85</span></span>
+            </span>
+          </button></li>
+          <li><button type="button" class="product" data-product="25">
+            <span class="product-media"><span class="product-noimg"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 2h6v3h-1v2.1A5 5 0 0 1 18 12v8a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2v-8a5 5 0 0 1 4-4.9V5H9V2Zm-1 12v4h8v-4H8Z"/></svg><b>Deltafen Suspension 100 mg/5 ml</b><small>Photo coming soon</small></span></span>
+            <span class="product-body">
+              <span class="product-form">Oral suspension</span>
+              <span class="product-name">Deltafen Suspension 100 mg/5 ml</span>
+              <span class="product-generic">Ibuprofen</span>
+              <span class="product-meta"><span>90 ml</span><span>Rs 85</span></span>
+            </span>
+          </button></li>
+          <li><button type="button" class="product" data-product="26">
+            <span class="product-media"><img src="assets/images/products/deltomol-syrup.jpg" alt="Deltomol Syrup pack" width="900" height="675" loading="lazy"></span>
+            <span class="product-body">
+              <span class="product-form">Syrup, sugar-free</span>
+              <span class="product-name">Deltomol Syrup</span>
+              <span class="product-generic">Salbutamol (as sulphate)</span>
+              <span class="product-meta"><span>60 ml</span><span>Rs 50</span></span>
+            </span>
+          </button></li>
+          <li><button type="button" class="product" data-product="27">
+            <span class="product-media"><span class="product-noimg"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 2h6v3h-1v2.1A5 5 0 0 1 18 12v8a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2v-8a5 5 0 0 1 4-4.9V5H9V2Zm-1 12v4h8v-4H8Z"/></svg><b>MB-Ron Syrup</b><small>Photo coming soon</small></span></span>
+            <span class="product-body">
+              <span class="product-form">Syrup</span>
+              <span class="product-name">MB-Ron Syrup</span>
+              <span class="product-generic">Iron (III) hydroxide polymaltose complex</span>
+              <span class="product-meta"><span>60 ml</span><span>Rs 110</span></span>
+            </span>
+          </button></li>
+          <li><button type="button" class="product" data-product="28">
+            <span class="product-media"><img src="assets/images/products/zindel-syrup.jpg" alt="Zindel Syrup pack" width="900" height="675" loading="lazy"></span>
+            <span class="product-body">
+              <span class="product-form">Oral solution</span>
+              <span class="product-name">Zindel Syrup</span>
+              <span class="product-generic">Zinc (as sulphate monohydrate)</span>
+              <span class="product-meta"><span>60 ml</span><span>Rs 85</span></span>
+            </span>
+          </button></li>
+          </ul>
+        </div>
+        <div class="product-group" data-category="dry-suspension">
+          <h3 class="product-group-title">Dry Suspension <span>4 products</span></h3>
+          <ul class="product-grid">
+          <li><button type="button" class="product" data-product="29">
+            <span class="product-media"><img src="assets/images/products/d-zeth-dry-suspension.jpg" alt="D-Zeth Dry Suspension 200 mg/5 ml pack" width="900" height="675" loading="lazy"><span class="product-more">3 photos</span></span>
+            <span class="product-body">
+              <span class="product-form">Powder for oral suspension</span>
+              <span class="product-name">D-Zeth Dry Suspension 200 mg/5 ml</span>
+              <span class="product-generic">Azithromycin (as dihydrate)</span>
+              <span class="product-meta"><span>15 ml</span><span>Rs 315</span></span>
+            </span>
+          </button></li>
+          <li><button type="button" class="product" data-product="30">
+            <span class="product-media"><img src="assets/images/products/excip-dry-suspension-125.jpg" alt="Excip Dry Suspension 125 mg/5 ml pack" width="900" height="675" loading="lazy"><span class="product-more">2 photos</span></span>
+            <span class="product-body">
+              <span class="product-form">Powder for oral suspension</span>
+              <span class="product-name">Excip Dry Suspension 125 mg/5 ml</span>
+              <span class="product-generic">Ciprofloxacin</span>
+              <span class="product-meta"><span>60 ml</span><span>Rs 165</span></span>
+            </span>
+          </button></li>
+          <li><button type="button" class="product" data-product="31">
+            <span class="product-media"><img src="assets/images/products/excip-dry-suspension-250.jpg" alt="Excip Dry Suspension 250 mg/5 ml pack" width="900" height="675" loading="lazy"><span class="product-more">2 photos</span></span>
+            <span class="product-body">
+              <span class="product-form">Powder for oral suspension</span>
+              <span class="product-name">Excip Dry Suspension 250 mg/5 ml</span>
+              <span class="product-generic">Ciprofloxacin</span>
+              <span class="product-meta"><span>60 ml</span><span>Rs 310</span></span>
+            </span>
+          </button></li>
+          <li><button type="button" class="product" data-product="32">
+            <span class="product-media"><img src="assets/images/products/linzodel-dry-suspension.jpg" alt="LinzoDel Dry Suspension 100 mg/5 ml pack" width="900" height="675" loading="lazy"></span>
+            <span class="product-body">
+              <span class="product-form">Powder for oral suspension</span>
+              <span class="product-name">LinzoDel Dry Suspension 100 mg/5 ml</span>
+              <span class="product-generic">Linezolid</span>
+              <span class="product-meta"><span>60 ml</span><span>Rs 550</span></span>
+            </span>
+          </button></li>
+          </ul>
+        </div>
+        </div>
+        <p class="product-empty caption" id="product-empty" hidden>No products match your search. Try a brand name such as Excip, or an ingredient such as paracetamol.</p>
+
+        <p class="product-note">Product information is provided for healthcare professionals, distributors and franchise partners. Use medicines only as prescribed by a registered medical practitioner. M.R.P. in Pakistani rupees, subject to change.</p>
       </div>
+
+      <dialog class="product-dialog" id="product-dialog" aria-labelledby="pd-name">
+        <div class="pd-layout">
+          <div class="pd-gallery">
+            <div class="pd-main" id="pd-main"></div>
+            <div class="pd-thumbs" id="pd-thumbs"></div>
+          </div>
+          <div class="pd-info">
+            <button type="button" class="pd-close" id="pd-close" aria-label="Close">&times;</button>
+            <p class="pd-category" id="pd-category"></p>
+            <h3 id="pd-name"></h3>
+            <p class="pd-class" id="pd-class"></p>
+            <p class="pd-label" id="pd-label">Composition</p>
+            <ul class="pd-composition" id="pd-composition"></ul>
+            <dl class="pd-specs" id="pd-specs"></dl>
+            <p class="caption pd-foot">Dispense on prescription. Store as directed on the pack, out of reach of children.</p>
+            <a href="#contact" class="button button-primary pd-enquire" id="pd-enquire">Enquire about this product <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </dialog>
+      <script type="application/json" id="product-data">[{"name": "Beta-Cyric 20 mg", "category": "Tablets", "form": "Tablet", "cls": "Non-steroidal anti-inflammatory (NSAID)", "composition": [["Piroxicam beta-cyclodextrin", "191.2 mg"], ["equivalent to Piroxicam", "20 mg"]], "spec": "Innovator's", "reg": "095051", "pack": "2 × 10 tablets", "mrp": "358.00", "images": ["beta-cyric", "beta-cyric-2"]}, {"name": "Cintadel 1 mg", "category": "Tablets", "form": "Tablet", "cls": "Prokinetic", "composition": [["Cinitapride (as hydrogen tartrate)", "1 mg"]], "spec": "Innovator's", "reg": "098976", "pack": "", "mrp": "", "images": []}, {"name": "Dardnil 50 mg", "category": "Tablets", "form": "Film-coated tablet", "cls": "Non-steroidal anti-inflammatory (NSAID)", "composition": [["Diclofenac potassium", "50 mg"]], "spec": "USP", "reg": "096951", "pack": "20 tablets", "mrp": "155.00", "images": []}, {"name": "Delkocin 500 mg", "category": "Tablets", "form": "Tablet", "cls": "Macrolide antibiotic", "composition": [["Clarithromycin", "500 mg"]], "spec": "USP", "reg": "098979", "pack": "", "mrp": "", "images": []}, {"name": "Delmol Extra", "category": "Tablets", "form": "Film-coated tablet", "cls": "Analgesic and antipyretic", "composition": [["Paracetamol", "500 mg"], ["Caffeine", "65 mg"]], "spec": "BP", "reg": "022292", "pack": "10 × 10 tablets", "mrp": "", "images": []}, {"name": "Delvetar 10 mg", "category": "Tablets", "form": "Tablet", "cls": "Statin, cholesterol-lowering", "composition": [["Rosuvastatin (as calcium)", "10 mg"]], "spec": "USP", "reg": "098977", "pack": "10 tablets", "mrp": "250.00", "images": []}, {"name": "Delvitis Multivitamin", "category": "Tablets", "form": "Film-coated tablet", "cls": "Complete daily multivitamin for adults", "composition": [["Vitamin A", "5000 IU"], ["Vitamin D3", "400 IU"], ["Vitamin C", "75 mg"], ["Vitamin B1", "10 mg"], ["Vitamin B2", "10 mg"], ["Vitamin B6", "5 mg"], ["Vitamin B12", "3 mcg"], ["Vitamin E", "10 mg"], ["Calcium D-pantothenate", "10 mg"], ["Folic acid", "5 mg"], ["Nicotinamide", "20 mg"]], "spec": "Innovator's", "reg": "041057", "pack": "30 tablets", "mrp": "220.00", "images": ["delvitis"]}, {"name": "Excip 250 mg", "category": "Tablets", "form": "Film-coated tablet", "cls": "Fluoroquinolone antibiotic", "composition": [["Ciprofloxacin (as HCl)", "250 mg"]], "spec": "USP", "reg": "032106", "pack": "10 tablets", "mrp": "325.00", "images": []}, {"name": "Excip 500 mg", "category": "Tablets", "form": "Film-coated tablet", "cls": "Fluoroquinolone antibiotic", "composition": [["Ciprofloxacin (as HCl)", "500 mg"]], "spec": "USP", "reg": "032107", "pack": "10 tablets", "mrp": "435.00", "images": ["excip-500mg-tablet"]}, {"name": "Faxetine 20 mg", "category": "Tablets", "form": "Film-coated tablet", "cls": "Antidepressant (SSRI)", "composition": [["Fluoxetine (as HCl)", "20 mg"]], "spec": "USP", "reg": "041624", "pack": "2 × 10 tablets", "mrp": "250.00", "images": ["faxetine", "faxetine-2"]}, {"name": "Levetazet 250 mg", "category": "Tablets", "form": "Film-coated tablet", "cls": "Fluoroquinolone antibiotic", "composition": [["Levofloxacin (as hemihydrate)", "250 mg"]], "spec": "USP", "reg": "028970", "pack": "10 tablets", "mrp": "280.00", "images": ["levetazet-250mg"]}, {"name": "Levetazet 500 mg", "category": "Tablets", "form": "Film-coated tablet", "cls": "Fluoroquinolone antibiotic", "composition": [["Levofloxacin (as hemihydrate)", "500 mg"]], "spec": "USP", "reg": "028971", "pack": "10 tablets", "mrp": "420.00", "images": ["levetazet-500mg"]}, {"name": "Linzmic 400 mg", "category": "Tablets", "form": "Film-coated tablet", "cls": "Oxazolidinone antibiotic", "composition": [["Linezolid", "400 mg"]], "spec": "Innovator's", "reg": "095050", "pack": "", "mrp": "", "images": []}, {"name": "Litrodel 2.5 mg", "category": "Tablets", "form": "Film-coated tablet", "cls": "Aromatase inhibitor", "composition": [["Letrozole", "2.5 mg"]], "spec": "USP", "reg": "094733", "pack": "30 tablets", "mrp": "", "images": []}, {"name": "Loranees 10 mg", "category": "Tablets", "form": "Tablet", "cls": "Non-sedating antihistamine", "composition": [["Loratadine", "10 mg"]], "spec": "USP", "reg": "028976", "pack": "10 tablets", "mrp": "150.00", "images": []}, {"name": "MB-Ron FA", "category": "Tablets", "form": "Film-coated tablet", "cls": "Haematinic, iron with folic acid", "composition": [["Iron (III) hydroxide polymaltose complex, eq. to elemental iron", "100 mg"], ["Folic acid", "0.35 mg"]], "spec": "Innovator's", "reg": "040606", "pack": "2 × 10 tablets", "mrp": "250.00", "images": ["mb-ron-fa"]}, {"name": "Paroxdel CR 25 mg", "category": "Tablets", "form": "Controlled-release tablet", "cls": "Antidepressant (SSRI)", "composition": [["Paroxetine (as HCl)", "25 mg"]], "spec": "USP", "reg": "098975", "pack": "3 × 10 tablets", "mrp": "889.00", "images": []}, {"name": "Reloxidel 400 mg", "category": "Tablets", "form": "Film-coated tablet", "cls": "Fluoroquinolone antibiotic", "composition": [["Moxifloxacin (as HCl)", "400 mg"]], "spec": "USP", "reg": "098981", "pack": "5 tablets", "mrp": "750.00", "images": ["reloxidel", "reloxidel-2", "reloxidel-3"]}, {"name": "Tonolix", "category": "Tablets", "form": "Tablet", "cls": "Strong analgesic combination", "composition": [["Tramadol HCl", "37.5 mg"], ["Paracetamol", "325 mg"]], "spec": "USP", "reg": "098980", "pack": "10 tablets", "mrp": "210.00", "images": ["tonolix"]}, {"name": "D-Zeth 250 mg", "category": "Capsules", "form": "Capsule", "cls": "Macrolide antibiotic", "composition": [["Azithromycin (as dihydrate)", "250 mg"]], "spec": "USP", "reg": "095969", "pack": "6 capsules", "mrp": "375.00", "images": ["d-zeth-250mg-capsule"]}, {"name": "Eso-Del 40 mg", "category": "Capsules", "form": "Capsule, enteric-coated pellets", "cls": "Proton pump inhibitor, anti-ulcer", "composition": [["Esomeprazole (as magnesium trihydrate)", "40 mg"]], "spec": "USP", "reg": "093628", "pack": "2 × 7 capsules", "mrp": "420.00", "images": ["eso-del-40mg"]}, {"name": "Karzole 20 mg", "category": "Capsules", "form": "Capsule, enteric-coated pellets", "cls": "Proton pump inhibitor", "composition": [["Omeprazole", "20 mg"]], "spec": "USP", "reg": "032109", "pack": "2 × 7 capsules", "mrp": "250.00", "images": ["karzole-20mg"]}, {"name": "Karzole 40 mg", "category": "Capsules", "form": "Capsule, enteric-coated pellets", "cls": "Proton pump inhibitor", "composition": [["Omeprazole", "40 mg"]], "spec": "USP", "reg": "093884", "pack": "2 × 7 capsules", "mrp": "300.00", "images": []}, {"name": "Delmol Suspension 120 mg/5 ml", "category": "Syrup", "form": "Paediatric oral suspension", "cls": "Analgesic and antipyretic for pain and fever", "composition": [["Paracetamol, per 5 ml", "120 mg"]], "spec": "USP", "reg": "022294", "pack": "60 ml", "mrp": "60.00", "images": ["delmol-suspension", "delmol-suspension-2", "delmol-suspension-3"]}, {"name": "Delmol Forte Suspension 250 mg/5 ml", "category": "Syrup", "form": "Oral suspension", "cls": "Analgesic and antipyretic for pain and fever", "composition": [["Paracetamol, per 5 ml", "250 mg"]], "spec": "USP", "reg": "022295", "pack": "60 ml", "mrp": "85.00", "images": ["delmol-forte-suspension"]}, {"name": "Deltafen Suspension 100 mg/5 ml", "category": "Syrup", "form": "Oral suspension", "cls": "Non-steroidal anti-inflammatory (NSAID)", "composition": [["Ibuprofen, per 5 ml", "100 mg"]], "spec": "USP", "reg": "020915", "pack": "90 ml", "mrp": "85.00", "images": []}, {"name": "Deltomol Syrup", "category": "Syrup", "form": "Syrup, sugar-free", "cls": "Bronchodilator for the relief of bronchospasm", "composition": [["Salbutamol (as sulphate), per 5 ml", "2 mg"]], "spec": "BP", "reg": "097301", "pack": "60 ml", "mrp": "50.00", "images": ["deltomol-syrup"]}, {"name": "MB-Ron Syrup", "category": "Syrup", "form": "Syrup", "cls": "Haematinic, iron supplement", "composition": [["Iron (III) hydroxide polymaltose complex, eq. to elemental iron, per 5 ml", "50 mg"]], "spec": "Innovator's", "reg": "040607", "pack": "60 ml", "mrp": "110.00", "images": []}, {"name": "Zindel Syrup", "category": "Syrup", "form": "Oral solution", "cls": "Zinc supplement", "composition": [["Zinc (as sulphate monohydrate), per 5 ml", "20 mg"]], "spec": "International Pharmacopoeia", "reg": "097302", "pack": "60 ml", "mrp": "85.00", "images": ["zindel-syrup"]}, {"name": "D-Zeth Dry Suspension 200 mg/5 ml", "category": "Dry Suspension", "form": "Powder for oral suspension", "cls": "Macrolide antibiotic, strawberry flavour", "composition": [["Azithromycin (as dihydrate), per 5 ml", "200 mg"]], "spec": "USP", "reg": "095970", "pack": "15 ml", "mrp": "315.00", "images": ["d-zeth-dry-suspension", "d-zeth-dry-suspension-2", "d-zeth-dry-suspension-3"]}, {"name": "Excip Dry Suspension 125 mg/5 ml", "category": "Dry Suspension", "form": "Powder for oral suspension", "cls": "Fluoroquinolone antibiotic, strawberry flavour", "composition": [["Ciprofloxacin, per 5 ml", "125 mg"]], "spec": "USP", "reg": "100215", "pack": "60 ml", "mrp": "165.00", "images": ["excip-dry-suspension-125", "excip-dry-suspension-125-2"]}, {"name": "Excip Dry Suspension 250 mg/5 ml", "category": "Dry Suspension", "form": "Powder for oral suspension", "cls": "Fluoroquinolone antibiotic, strawberry flavour", "composition": [["Ciprofloxacin, per 5 ml", "250 mg"]], "spec": "USP", "reg": "100214", "pack": "60 ml", "mrp": "310.00", "images": ["excip-dry-suspension-250", "excip-dry-suspension-250-2"]}, {"name": "LinzoDel Dry Suspension 100 mg/5 ml", "category": "Dry Suspension", "form": "Powder for oral suspension", "cls": "Oxazolidinone antibiotic", "composition": [["Linezolid, per 5 ml", "100 mg"]], "spec": "Innovator's", "reg": "095971", "pack": "60 ml", "mrp": "550.00", "images": ["linzodel-dry-suspension"]}]</script>
     </section>
 
     <!-- ============ WHY US / STATS ============ -->
@@ -319,6 +703,7 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=5" defer></script>
+  <script src="js/main.js?v=6" defer></script>
+  <script src="js/products.js?v=6" defer></script>
 </body>
 </html>

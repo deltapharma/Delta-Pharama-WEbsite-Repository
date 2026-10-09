@@ -9,13 +9,22 @@ delta-pharma-website/
 ├── index.html                      # All page content
 ├── css/styles.css                  # Brand colours, typography, layout
 ├── js/main.js                      # Mobile menu, scroll effects, contact form
+├── js/products.js                  # Product category filter, search and detail popup
 └── assets/images/
     ├── delta-pharma-logo.jpg       # Original supplied logo (unchanged)
     ├── delta-pharma-logo-trim.jpg  # Same artwork with outer whitespace trimmed (used on site)
     ├── delta-pharma-icon.png       # Logo mark only (512×512)
     ├── apple-touch-icon.png        # 180×180 home-screen icon
-    └── favicon.png                 # 48×48 browser tab icon
+    ├── favicon.png                 # 48×48 browser tab icon
+    ├── licence-to-manufacture.jpg  # Government of Pakistan Licence to Manufacture (Quality section)
+    └── products/                   # Product pack photos
 ```
+
+## Products
+
+The Products section lists all 33 registered products from the product details sheet, grouped as Tablets, Capsules, Syrup and Dry Suspension. Each product card is written into `index.html`. The details shown in the product popup (composition, pack size, registration number, M.R.P., photos) come from the `product-data` JSON block at the end of the Products section in `index.html`. When a price or pack size changes, update it in both the card and the JSON block.
+
+Products without a photo show a "Photo coming soon" tile. To add a photo, save it in `assets/images/products/` and add its file name (without `.jpg`) to that product's `images` list in the JSON block, then replace the tile in its card with an `<img>`.
 
 ## Brand system applied
 
