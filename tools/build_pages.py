@@ -2,7 +2,7 @@
 """
 Build the SEO pages for deltapharma.com.pk from the product list in index.html.
 
-Run from the repository root whenever a product, price or photo changes:
+Run from the repository root whenever a product or photo changes:
 
     python tools/build_pages.py
 
@@ -195,8 +195,7 @@ FOOT = f"""
 """
 
 NOTE = ('<p class="product-note">Product information is provided for healthcare professionals, distributors and franchise '
-        'partners. Use medicines only as prescribed by a registered medical practitioner. M.R.P. in Pakistani rupees, '
-        'subject to change.</p>')
+        'partners. Use medicines only as prescribed by a registered medical practitioner.</p>')
 
 
 def breadcrumb_html(items):
@@ -235,7 +234,7 @@ def card(p, heading="h3"):
     else:
         media = (f'<span class="product-noimg">{ICONS[p["category"]]}<b>{e(p["name"])}</b>'
                  f'<small>Photo coming soon</small></span>')
-    meta = f'<span>{e(p["pack"]) or "&nbsp;"}</span><span>{"Rs " + str(int(float(p["mrp"]))) if p["mrp"] else ""}</span>'
+    meta = f'<span>{e(p["pack"]) or "&nbsp;"}</span>'
     return f"""<li><a class="product" href="{p['url']}">
             <span class="product-media">{media}</span>
             <span class="product-body">
@@ -255,8 +254,7 @@ def product_page(p, products):
     title = f"{p['name']} ({p['generic']}) {fw if fw not in p['name'] else ''}".replace("  ", " ").strip()
     title = f"{title} | Delta Pharma Pakistan"
     pack = f", pack of {p['pack']}" if p["pack"] else ""
-    price = f", M.R.P. Rs {p['mrp'].replace('.00', '')}" if p["mrp"] else ""
-    desc = (f"{p['name']}: {p['generic']} {p['form'].lower()}{pack}{price}. {p['cls']}. "
+    desc = (f"{p['name']}: {p['generic']} {p['form'].lower()}{pack}. {p['cls']}. "
             f"Manufactured by Delta Pharma (Pvt.) Ltd., Nowshera, Pakistan. DRAP Reg. No. {p['reg']}.")
     crumbs = [("Home", "/"), ("Products", "/products/"), (CATEGORY_TITLE[cat], f"/products/#{CATEGORY_SLUG[cat]}"), (p["name"], None)]
 
@@ -279,7 +277,6 @@ def product_page(p, products):
         ("Pack size", p["pack"] or "On request"),
         ("Specification", spec_word),
         ("DRAP registration no.", p["reg"]),
-        ("M.R.P.", f"Rs {p['mrp']}" if p["mrp"] else "On request"),
         ("Category", cat),
     ]
     specs_html = "".join(f"<div><dt>{e(a)}</dt><dd>{e(b)}</dd></div>" for a, b in specs)
@@ -407,7 +404,7 @@ def catalogue_page(products):
         {breadcrumb_html(crumbs)}
         <p class="eyebrow">Our products</p>
         <h1>Delta Pharma products</h1>
-        <p class="lead">{len(products)} registered medicines made in Nowshera, Pakistan: tablets, capsules, syrups and dry suspensions. Select a product for its composition, pack size, DRAP registration number and M.R.P.</p>
+        <p class="lead">{len(products)} registered medicines made in Nowshera, Pakistan: tablets, capsules, syrups and dry suspensions. Select a product for its composition, pack size, and DRAP registration number</p>
         <nav class="category-jump" aria-label="Jump to dosage form">{jump}</nav>
       </div>
     </section>
@@ -422,7 +419,7 @@ def catalogue_page(products):
 """
     title = "Products – Tablets, Capsules, Syrups & Dry Suspensions | Delta Pharma Pakistan"
     desc = (f"All {len(products)} registered medicines from Delta Pharma (Pvt.) Ltd., Nowshera: antibiotics such as Excip, "
-            "Levetazet, D-Zeth and Reloxidel, plus Delmol, Eso-Del, Karzole and more, with composition, pack size and M.R.P.")
+            "Levetazet, D-Zeth and Reloxidel, plus Delmol, Eso-Del, Karzole and more, with composition, pack size and DRAP registration numbers")
     return head(title, desc, "/products/", "/assets/images/delta-pharma-logo.jpg", ld) + body + FOOT
 
 

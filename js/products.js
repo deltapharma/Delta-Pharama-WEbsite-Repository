@@ -97,7 +97,6 @@
       ['Pack size', p.pack || 'On request'],
       ['Specification', p.spec + (p.spec.indexOf('International') === 0 ? '' : ' specification')],
       ['Registration no.', p.reg],
-      ['M.R.P.', p.mrp ? 'Rs ' + p.mrp : 'On request'],
       ['Category', p.category]
     ];
     document.getElementById('pd-specs').innerHTML = specs.map(function (s) {

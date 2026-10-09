@@ -24,7 +24,7 @@ delta-pharma-website/
 
 ## Products
 
-The Products section lists all 33 registered products from the product details sheet, grouped as Tablets, Capsules, Syrup and Dry Suspension. Each product card is written into `index.html`. The details shown in the product popup (composition, pack size, registration number, M.R.P., photos) come from the `product-data` JSON block at the end of the Products section in `index.html`. When a price or pack size changes, update it in both the card and the JSON block.
+The Products section lists all 33 registered products from the product details sheet, grouped as Tablets, Capsules, Syrup and Dry Suspension. Each product card is written into `index.html`. The details shown in the product popup (composition, pack size, registration number, photos) come from the `product-data` JSON block at the end of the Products section in `index.html`. When a pack size changes, update it in both the card and the JSON block.
 
 Products without a photo show a "Photo coming soon" tile. To add a photo, save it in `assets/images/products/` and add its file name (without `.jpg`) to that product's `images` list in the JSON block, then replace the tile in its card with an `<img>`.
 
@@ -67,7 +67,7 @@ After changing `css/styles.css` or `js/main.js`, raise the `?v=` number on their
 
 Each product has its own page at `/products/<name>/` (for example `/products/excip-500mg/`), plus a catalogue at `/products/`. These pages, `sitemap.xml`, `robots.txt` and `404.html` are generated from the `product-data` JSON block in `index.html`.
 
-**After changing any product, price, pack size or photo, rebuild them:**
+**After changing any product, pack size or photo, rebuild them:**
 
 ```bash
 python tools/build_pages.py
