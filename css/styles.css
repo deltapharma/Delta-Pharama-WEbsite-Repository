@@ -866,3 +866,82 @@ small, .caption, .meta {
   *, *::before, *::after { transition: none !important; animation: none !important; }
   .reveal { opacity: 1; transform: none; }
 }
+
+/* ==========================================================
+   Leadership — Chairman profile
+   ========================================================== */
+.leader {
+  display: grid;
+  grid-template-columns: minmax(0, 380px) minmax(0, 1fr);
+  gap: 64px;
+  align-items: start;
+  background: var(--brand-mist);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 48px;
+}
+.leader-portrait { margin: 0; position: sticky; top: calc(var(--header-h) + 24px); }
+.leader-frame {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: #F7F5F0;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-md);
+}
+.leader-frame::after {
+  content: "";
+  position: absolute; left: 0; right: 0; bottom: 0; height: 5px;
+  background: linear-gradient(90deg, var(--brand-navy), var(--brand-blue) 60%, var(--brand-teal));
+}
+.leader-frame img { display: block; width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; }
+.leader-portrait figcaption { margin-top: 18px; }
+.leader-portrait figcaption strong {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 20px;
+  color: var(--brand-navy);
+  line-height: 1.25;
+}
+.leader-portrait figcaption span { font-size: 14px; color: var(--brand-slate); }
+.leader-bio > h2 { margin-bottom: 18px; }
+.leader-bio p { max-width: 68ch; }
+.leader-intro { font-size: 18px; color: var(--brand-navy); }
+.leader-roles { list-style: none; margin: 0 0 28px; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.leader-roles li {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 1.3;
+  padding: 7px 14px;
+  border-radius: 999px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  color: var(--brand-navy);
+}
+.leader-focus { margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--line); }
+.leader-focus h3 {
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--brand-slate);
+  margin: 0 0 12px;
+}
+.leader-focus ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.leader-focus li {
+  font-size: 14px;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 4px;
+  background: var(--white);
+  border-left: 3px solid var(--brand-teal);
+  color: var(--brand-navy);
+}
+@media (max-width: 899px) {
+  .leader { grid-template-columns: 1fr; gap: 32px; padding: 28px 22px; }
+  .leader-portrait { position: static; max-width: 340px; }
+}
+@media (max-width: 480px) {
+  .leader { padding: 22px 16px; border-radius: var(--radius); }
+  .leader-intro { font-size: 17px; }
+}
