@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="css/styles.css?v=7">
+  <link rel="stylesheet" href="css/styles.css?v=8">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -212,13 +212,7 @@
           </li>
         </ol>
 
-        <div class="licence-block">
-          <figure class="licence-figure">
-            <button type="button" class="licence-open" id="licence-open" aria-label="View the Licence to Manufacture full size">
-              <img src="assets/images/licence-to-manufacture.jpg" alt="Government of Pakistan Licence to Manufacture No. 000446 issued to Delta Pharma (Pvt) Ltd. by the Central Licensing Board" width="971" height="1100" loading="lazy">
-            </button>
-            <figcaption class="caption">Select the licence to view it full size.</figcaption>
-          </figure>
+        <div class="licence-block licence-block-text">
           <div class="licence-copy">
             <p class="section-marker">Licensed manufacturer</p>
             <h3>Licensed by the Government of Pakistan</h3>
@@ -232,10 +226,6 @@
         </div>
       </div>
 
-      <dialog class="licence-dialog" id="licence-dialog" aria-label="Licence to Manufacture">
-        <button type="button" class="pd-close" id="licence-close" aria-label="Close">&times;</button>
-        <img src="assets/images/licence-to-manufacture.jpg" alt="Government of Pakistan Licence to Manufacture No. 000446 issued to Delta Pharma (Pvt) Ltd.">
-      </dialog>
     </section>
 
     <!-- ============ PRODUCTS ============ -->
@@ -744,11 +734,31 @@
     </div>
     <div class="container footer-bottom">
       <small>© <span id="year">2026</span> Delta Pharma (Pvt.) Limited. All rights reserved.</small>
-      <a href="#top" class="back-to-top">Back to top ↑</a>
+      <span class="footer-bottom-links"><button type="button" class="doc-link" id="doc-link">Document verification</button><a href="#top" class="back-to-top">Back to top ↑</a></span>
     </div>
   </footer>
 
-  <script src="js/main.js?v=6" defer></script>
-  <script src="js/products.js?v=6" defer></script>
+  <dialog class="licence-dialog" id="doc-dialog" aria-labelledby="doc-title">
+    <button type="button" class="pd-close" id="doc-close" aria-label="Close">&times;</button>
+    <div class="doc-step" data-step="1">
+      <p class="section-marker">Document verification</p>
+      <h3 id="doc-title">Licence to Manufacture</h3>
+      <p>Delta Pharma (Pvt.) Ltd. holds Licence to Manufacture No. 000446 (Formulation), issued by the Central Licensing Board.</p>
+      <p class="caption">A copy of the licence document is available for distributors, regulators and partners who need to verify it.</p>
+      <button type="button" class="button button-ghost doc-next" data-go="2">Request document copy</button>
+    </div>
+    <div class="doc-step" data-step="2" hidden>
+      <p class="section-marker">Document verification</p>
+      <h3>Before you continue</h3>
+      <p>This copy is provided for verification only. It may not be reproduced, published or used for any other purpose without written permission from Delta Pharma (Pvt.) Ltd.</p>
+      <button type="button" class="button button-primary doc-next" data-go="3">I understand, show document</button>
+    </div>
+    <div class="doc-step" data-step="3" hidden>
+      <div class="doc-view" id="doc-view"></div>
+    </div>
+  </dialog>
+
+  <script src="js/main.js?v=7" defer></script>
+  <script src="js/products.js?v=7" defer></script>
 </body>
 </html>

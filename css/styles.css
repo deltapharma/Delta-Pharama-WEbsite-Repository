@@ -945,3 +945,18 @@ small, .caption, .meta {
   .leader { padding: 22px 16px; border-radius: var(--radius); }
   .leader-intro { font-size: 17px; }
 }
+
+/* Licence — text-only block in Quality; document behind footer verification link */
+.licence-block-text { grid-template-columns: 1fr; }
+.footer-bottom-links { display: inline-flex; align-items: center; gap: 20px; flex-wrap: wrap; }
+.doc-link {
+  background: none; border: 0; padding: 0; cursor: pointer;
+  font: inherit; font-size: 12px; color: var(--brand-slate); opacity: 0.7;
+}
+.doc-link:hover { opacity: 1; text-decoration: underline; }
+#doc-dialog { width: min(560px, calc(100% - 32px)); padding: 32px 28px 28px; }
+#doc-dialog:has(.doc-step[data-step="3"]:not([hidden])) { width: min(760px, calc(100% - 32px)); padding: 16px; }
+.doc-step h3 { margin: 0 0 12px; padding-right: 40px; }
+.doc-step p { color: var(--brand-ink); }
+.doc-step .button { margin-top: 8px; }
+.doc-view img { display: block; width: 100%; height: auto; user-select: none; -webkit-user-drag: none; }

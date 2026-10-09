@@ -17,7 +17,8 @@ delta-pharma-website/
     ├── delta-pharma-icon.png       # Logo mark only (512×512)
     ├── apple-touch-icon.png        # 180×180 home-screen icon
     ├── favicon.png                 # 48×48 icon (older; the site now uses /favicon.ico)
-    ├── licence-to-manufacture.jpg  # Government of Pakistan Licence to Manufacture (Quality section)
+    ├── chairman-ashfaq-paracha.jpg # Chairman portrait (Leadership section)
+    ├── v/d-4f7c2a.jpg              # Licence to Manufacture (shown only via footer "Document verification")
     └── products/                   # Product pack photos
 ```
 
@@ -43,6 +44,10 @@ Products without a photo show a "Photo coming soon" tile. To add a photo, save i
 - **Body text, captions:** Open Sans 400/600 (16 px minimum)
 - Fonts load from Google Fonts with Arial/Helvetica fallbacks.
 - The logo artwork is used as supplied — never recreated with typed text.
+
+## Licence document
+
+The licence image is not shown on the page. It opens only after three clicks: the small "Document verification" link in the footer, "Request document copy", then "I understand, show document". The image path appears only in `js/products.js` and is excluded from search engines in `robots.txt`. Anyone determined can still find it, so do not treat it as private.
 
 ## Contact details
 

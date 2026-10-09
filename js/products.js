@@ -128,13 +128,30 @@
   wireClose(dialog, document.getElementById('pd-close'));
 
   // ----- Licence popup -----
-  var licence = document.getElementById('licence-dialog');
-  var licenceOpen = document.getElementById('licence-open');
-  if (licence && licenceOpen) {
-    licenceOpen.addEventListener('click', function () {
-      if (typeof licence.showModal === 'function') licence.showModal();
-      else licence.setAttribute('open', '');
+  var doc = document.getElementById('doc-dialog');
+  var docLink = document.getElementById('doc-link');
+  if (doc && docLink) {
+    var steps = doc.querySelectorAll('.doc-step');
+    var view = document.getElementById('doc-view');
+    var show = function (n) {
+      steps.forEach(function (s) { s.hidden = s.getAttribute('data-step') !== String(n); });
+      if (n === 3 && !view.firstChild) {
+        var img = new Image();
+        img.alt = 'Licence to Manufacture No. 000446';
+        img.draggable = false;
+        img.src = ['assets', 'images', 'v', 'd-4f7c2a.jpg'].join('/');
+        img.addEventListener('contextmenu', function (e) { e.preventDefault(); });
+        view.appendChild(img);
+      }
+    };
+    docLink.addEventListener('click', function () {
+      show(1);
+      if (typeof doc.showModal === 'function') doc.showModal();
+      else doc.setAttribute('open', '');
     });
-    wireClose(licence, document.getElementById('licence-close'));
+    doc.querySelectorAll('.doc-next').forEach(function (b) {
+      b.addEventListener('click', function () { show(+b.getAttribute('data-go')); });
+    });
+    wireClose(doc, document.getElementById('doc-close'));
   }
 })();
