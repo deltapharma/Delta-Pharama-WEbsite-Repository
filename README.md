@@ -7,6 +7,7 @@ A responsive, single-page static website built on the Delta Pharma brand kit and
 ```
 delta-pharma-website/
 ├── index.html                      # All page content
+├── favicon.ico                     # Browser tab icon (16, 32, 48 px)
 ├── css/styles.css                  # Brand colours, typography, layout
 ├── js/main.js                      # Mobile menu, scroll effects, contact form
 ├── js/products.js                  # Product category filter, search and detail popup
@@ -15,7 +16,7 @@ delta-pharma-website/
     ├── delta-pharma-logo-trim.jpg  # Same artwork with outer whitespace trimmed (used on site)
     ├── delta-pharma-icon.png       # Logo mark only (512×512)
     ├── apple-touch-icon.png        # 180×180 home-screen icon
-    ├── favicon.png                 # 48×48 browser tab icon
+    ├── favicon.png                 # 48×48 icon (older; the site now uses /favicon.ico)
     ├── licence-to-manufacture.jpg  # Government of Pakistan Licence to Manufacture (Quality section)
     └── products/                   # Product pack photos
 ```
