@@ -44,6 +44,10 @@ The form opens WhatsApp with the visitor's message pre-filled, sent to the numbe
 
 Review the **Products**, About and Quality wording so every claim matches what the company can verify.
 
+## Updating the design
+
+After changing `css/styles.css` or `js/main.js`, raise the `?v=` number on their links in `index.html` (e.g. `?v=5` → `?v=6`) so visitors' browsers load the new version instead of an old saved copy.
+
 ## Deploying
 
 Upload the whole folder to your repository root. It works on GitHub Pages, Netlify, Vercel, cPanel hosting or any static host — `index.html` is the entry point.
