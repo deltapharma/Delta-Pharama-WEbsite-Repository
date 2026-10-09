@@ -63,6 +63,20 @@ Review the **Products**, About and Quality wording so every claim matches what t
 
 After changing `css/styles.css` or `js/main.js`, raise the `?v=` number on their links in `index.html` (e.g. `?v=5` → `?v=6`) so visitors' browsers load the new version instead of an old saved copy.
 
+## SEO pages (product pages, sitemap, robots.txt)
+
+Each product has its own page at `/products/<name>/` (for example `/products/excip-500mg/`), plus a catalogue at `/products/`. These pages, `sitemap.xml`, `robots.txt` and `404.html` are generated from the `product-data` JSON block in `index.html`.
+
+**After changing any product, price, pack size or photo, rebuild them:**
+
+```bash
+python tools/build_pages.py
+```
+
+then commit the changed files. Do not edit files inside `products/` by hand; they are overwritten on every build.
+
+The homepage `<head>` carries the page title, description, canonical link and Organization/LocalBusiness structured data. Product pages carry Drug and Breadcrumb structured data with the DRAP registration number.
+
 ## Deploying
 
 Upload the whole folder to your repository root. It works on GitHub Pages, Netlify, Vercel, cPanel hosting or any static host — `index.html` is the entry point.

@@ -61,6 +61,17 @@
   }
   function src(name) { return 'assets/images/products/' + name + '.jpg'; }
 
+  // Product page address, e.g. "Excip 500 mg" -> /products/excip-500mg/
+  // Must match slug() in tools/build_pages.py.
+  function slug(name) {
+    return name.toLowerCase()
+      .replace(/ mg\/5 ml/g, 'mg-5ml')
+      .replace(/ mg/g, 'mg')
+      .replace(/(\d)\.(\d)/g, '$1-$2')
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/^-+|-+$/g, '');
+  }
+
   function showImage(p, k) {
     main.innerHTML = p.images.length
       ? '<img src="' + src(p.images[k]) + '" alt="' + esc(p.name) + ', photo ' + (k + 1) + '">'
@@ -100,6 +111,9 @@
       if (b) showImage(p, +b.dataset.k);
     };
     showImage(p, 0);
+
+    var pageLink = document.getElementById('pd-page');
+    if (pageLink) pageLink.href = '/products/' + slug(p.name) + '/';
 
     // Pre-select "Product enquiry" and mention the product in the contact form
     var enquire = document.getElementById('pd-enquire');

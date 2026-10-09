@@ -1,2 +1,7 @@
 User-agent: *
+Allow: /
+Disallow: /tools/
+# Licence document: shown only through the footer "Document verification" flow
 Disallow: /assets/images/v/
+
+Sitemap: https://deltapharma.com.pk/sitemap.xml
